@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/22 07:31:48 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/07/22 15:06:21 by gfantoni         ###   ########.fr       */
+/*   Created: 2023/07/22 13:02:21 by gfantoni          #+#    #+#             */
+/*   Updated: 2023/07/22 13:05:07 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-int	ft_isdigit(int c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
-
-//#include <stdio.h>
-//int	main(void)
-//{
-//	int	c;
-//	int	result;
-//
-//	c = '1';
-//	result = ft_isdigit(c);
-//	printf("%d\n", result);
-//	return (0);
-//}
+size_t	ft_strlen(const char *str);
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
