@@ -4,11 +4,10 @@
 
 int	main(void)
 {
-	char	strA[] = "Melvin Vive!";
-	char	strB[] = "Benas louco";
-	
-	printf("before: %s\n", strA);
-	ft_memmove(strA + 1, strA, sizeof(strB)); 
-	printf("after: %s\n", strA);
+	char	dest[] = "O estrago será na carne do inimigo e o sangue será tomado ainda quente!";
+	char	src[] = "Melvin...";
+	size_t	result;
+	result = ft_strlcat(dest, src, 10);
+	printf("%ld\n", result);
 	return (0);
 }
