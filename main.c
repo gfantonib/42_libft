@@ -4,10 +4,11 @@
 
 int	main(void)
 {
-	char	dest[] = "O estrago será na carne do inimigo e o sangue será tomado ainda quente!";
-	char	src[] = "Melvin...";
-	size_t	result;
-	result = ft_strlcat(dest, src, 10);
-	printf("%ld\n", result);
+	char	c;
+	int	n;
+	
+	c = 'z';
+	n = ft_tolower(c);
+	printf("%c\n", n);
 	return (0);
 }
