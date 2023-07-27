@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/26 15:21:40 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/07/27 09:18:02 by gfantoni         ###   ########.fr       */
+/*   Created: 2023/07/27 12:18:28 by gfantoni          #+#    #+#             */
+/*   Updated: 2023/07/27 14:58:01 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_atoi(const char *str)
 {
-	unsigned int	z;
+	int	i;
+	int	is_neg;
+	int	res;
 
-	z = 0;
-	while ((s1[z] != '\0' || s2[z] != '\0') && n--)
+	if (*str == '\0')
+		return (0);
+	i = 0;
+	while ((str[i] >= '\t' && str[i] <= '\r') || (str[i] == ' '))
+		i++;
+	is_neg = 1;
+	if (str[i] == '-')
 	{
-		if (s1[z] != s2[z])
-			return ((unsigned char)s1[z] - (unsigned char)s2[z]);
-		z++;
+		is_neg = -1;
+		i++;
 	}
-	return (0);
+	else if (str[i] == '+')
+		i++;
+	res = 0;
+	while (str[i] >= '0' && str [i] <= '9')
+		res = (res * 10) + (str[i++] - '0');
+	return (res * is_neg);
 }

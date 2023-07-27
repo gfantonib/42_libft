@@ -4,11 +4,8 @@
 
 int	main(void)
 {
-	char	*str = "Meu nome é Kevin Bohn!";
-	char	*str2 = "Meu nome é Kenin Bohn!";
-
-	printf("%d\n", ft_strncmp(str, str2, 10));
-	printf("%d\n", strncmp(str, str2, 10));
+	char	*str = "Melvin Vive!";
+	printf("%s\n", ft_strdup(str));
+	printf("%s\n", strdup(str));
 	return (0);
-
 }

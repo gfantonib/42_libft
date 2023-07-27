@@ -2,13 +2,14 @@
 #include <stdio.h> 
 #include <string.h> 
  
-int     main(void) 
-{ 
-        char    *str = "Meu nome é Kevin Bohn!"; 
-        char    c = 'M'; 
- 
-        printf("%s\n", str); 
-        printf("%s\n", strrchr(str, c)); 
-        return (0); 
-} 
+int	main(void)
+{
+	char 	*s = "Melvin in the Z land";
+	char	c = 'Z';
+	int	n = 20;
+
+	printf("%s\n", memchr(s, c, n));
+	return (0);
+
+}
 
