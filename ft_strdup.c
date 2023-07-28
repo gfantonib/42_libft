@@ -6,7 +6,7 @@
 /*   By: gfantoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 18:33:44 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/07/27 18:54:16 by gfantoni         ###   ########.fr       */
+/*   Updated: 2023/07/28 09:26:37 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strdup(const char *s1)
 {
 	size_t	i;
 	char	*dest;
-	
+
 	i = 0;
 	while (s1[i])
 		i++;
