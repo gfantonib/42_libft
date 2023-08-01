@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 14:57:04 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/07/31 20:46:04 by gfantoni         ###   ########.fr       */
+/*   Updated: 2023/08/01 15:56:57 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int	ft_wordsize(char const *str, char c)
 	return (len);
 }
 
-static char	**ft_split(char const *s, char c)
+static char	**split(char const *s, char c)
 {
 	char	**mem;
 	int		i;
@@ -76,9 +76,9 @@ static char	**ft_split(char const *s, char c)
 	return (mem);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	if (!s || !c)
 		return (NULL);
-	return (ft_split(s, c));
+	return (split(s, c));
 }
