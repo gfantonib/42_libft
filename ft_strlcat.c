@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 17:50:55 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/07/28 19:17:22 by gfantoni         ###   ########.fr       */
+/*   Updated: 2023/07/31 14:51:36 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		return (src_len + size);
 	return (src_len + dst_len);
 }
-

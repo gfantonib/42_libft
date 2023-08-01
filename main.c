@@ -1,15 +1,15 @@
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 #include "libft.h"
+#include <stdio.h>
 
-int	main(void)
+int             main(void)
 {
-	char	*result;
-	char	*pre = "Eu não sei seu nome inteiro";
-	char	*su = "Eo";
+        char    *ptr;
+        char    **new;
 
-	result = ft_strtrim(pre, su);
-	printf("%s\n", result);
-	return (0);
+        ptr = "this*is**my***string";
+
+        new = (ft_strsplit(ptr, '*'));
+        printf("%s\n%s\n%s\n\%s\n" , new[0], new[1], new[2],  new[3]);
+        return (0);
 }
+
