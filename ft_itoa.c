@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 09:05:29 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/08/01 13:21:24 by gfantoni         ###   ########.fr       */
+/*   Updated: 2023/08/02 10:47:42 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_itoa(int n)
 		str[i] = (nbr % 10) + '0';
 		nbr = nbr / 10;
 	}
-	if (n < 0) 
+	if (n < 0)
 		str[0] = '-';
 	return (str);
 }
