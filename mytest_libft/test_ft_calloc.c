@@ -6,7 +6,7 @@
 /*   By: gfantoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:52:11 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/08/02 18:22:23 by gfantoni         ###   ########.fr       */
+/*   Updated: 2023/08/03 17:28:29 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int	main(void)
 	i = 0;
 	while(i <= 5)
 	{
-		memory = calloc(10, mtypes[i]);
+		memory = ft_calloc(10, mtypes[i]);
 		if (!memory)
 			printf("KO");
 		if(memory)
-			printf("OK");
+			printf("OooK");
 		printf("\n");
 		i++;
 	}

@@ -6,20 +6,20 @@
 /*   By: gfantoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 15:12:39 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/08/02 18:04:49 by gfantoni         ###   ########.fr       */
+/*   Updated: 2023/08/03 17:26:06 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
-	
+
 	if (nmemb == 0 || size == 0)
-		retrun (malloc(0));
+		return (malloc(0));
 	if (nmemb * size > 2147483647)
-		return (NULL)
+		return (NULL);
 	ptr = (void *)malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
