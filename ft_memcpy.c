@@ -6,7 +6,7 @@
 /*   By: gfantoni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 13:46:26 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/07/25 14:39:51 by gfantoni         ###   ########.fr       */
+/*   Updated: 2023/08/04 10:57:59 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	altdst = (unsigned char *)dst;
 	altsrc = (unsigned char *)src;
+	if (dst == 0 && src == 0)
+		return (NULL);
 	while (n > 0)
 	{
 		*altdst = *altsrc;

@@ -6,49 +6,62 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 09:05:29 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/08/02 10:47:42 by gfantoni         ###   ########.fr       */
+/*   Updated: 2023/08/05 13:34:43 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	algarism(int n)
+static unsigned int	get_nb_digit(long n_l, int sign)
 {
-	size_t	counter;
+	unsigned int	nb_digit;
 
-	if (n == 0)
+	if (n_l == 0)
 		return (1);
-	counter = 0;
-	while (n)
+	nb_digit = 0;
+	while (n_l > 0)
 	{
-		n = n / 10;
-		counter++;
+		n_l /= 10;
+		nb_digit++;
 	}
-	return (counter);
+	if (sign == -1)
+		nb_digit++;
+	return (nb_digit);
+}
+
+static void	convert_nb(char *outstr, long n_l, unsigned int nb_digit, int sign)
+{
+	outstr[nb_digit] = '\0';
+	outstr[--nb_digit] = n_l % 10 + '0';
+	n_l /= 10;
+	while (n_l > 0)
+	{
+		outstr[--nb_digit] = n_l % 10 + '0';
+		n_l /= 10;
+	}
+	if (sign == -1)
+		outstr[0] = '-';
 }
 
 char	*ft_itoa(int n)
 {
-	long int	nbr;
-	size_t		i;
-	char		*str;
+	unsigned int	nb_digit;
+	char			*outstr;
+	long			n_l;
+	int				sign;
 
-	nbr = n;
-	i = algarism(n);
+	sign = 1;
 	if (n < 0)
 	{
-		nbr *= -1;
-		i++;
+		n_l = (long)n * -1;
+		sign = -1;
 	}
-	str = (char *)malloc(sizeof(char) * (i + 1));
-	if (!str)
+	else
+		n_l = n;
+	nb_digit = get_nb_digit(n_l, sign);
+	outstr = malloc(sizeof(char) * (nb_digit + 1));
+	if (!outstr)
 		return (NULL);
-	while (i--)
-	{
-		str[i] = (nbr % 10) + '0';
-		nbr = nbr / 10;
-	}
-	if (n < 0)
-		str[0] = '-';
-	return (str);
+	convert_nb(outstr, n_l, nb_digit, sign);
+	return (outstr);
 }
