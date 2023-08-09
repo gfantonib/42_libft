@@ -17,11 +17,10 @@ HEADER = libft.h
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rsc $(NAME) $?
-	ranlib $(NAME)
 
-$(OBJS): $(SRC)
+%.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
+	ar rsc $(NAME) $?
 
 clean:
 	rm -rf $(OBJS) $(BONUS_OBJS)
@@ -31,11 +30,7 @@ fclean: clean
 
 re: fclean all
 
-$(BONUS_OBJS): $(BONUS)
-	$(CC) $(FLAGS) -c $< -o $@
 	
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rsc $(NAME) $?
-	ranlib $(NAME)
+bonus: $(BONUS_OBJS)
 
 .PHONY: all clean fclean re bonus 
