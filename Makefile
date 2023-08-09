@@ -6,7 +6,7 @@ OBJS = ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_isprint.o ft_strle
 
 FLAGS = -Wall -Wextra -Werror -g
 
-CC = gcc
+CC = cc
 
 HEADER = libft.h
 
