@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/02 10:14:03 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/08/10 09:33:48 by gfantoni         ###   ########.fr       */
+/*   Created: 2023/08/10 18:50:08 by gfantoni          #+#    #+#             */
+/*   Updated: 2023/08/10 19:09:04 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (!s || fd < 0)
-		return ;
-	while (*s != '\0')
-	{
-		ft_putchar_fd(*s, fd);
-		s++;
-	}
-}
+	
+

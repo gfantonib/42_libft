@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/02 10:14:03 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/08/10 09:33:48 by gfantoni         ###   ########.fr       */
+/*   Created: 2023/08/10 09:31:07 by gfantoni          #+#    #+#             */
+/*   Updated: 2023/08/10 12:44:54 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!s || fd < 0)
-		return ;
-	while (*s != '\0')
+	if (lst)
 	{
-		ft_putchar_fd(*s, fd);
-		s++;
+		if (*lst)
+			new->next = *lst;
+		*lst = new;
 	}
 }
+//lst: The address of a pointer to the first link of
+//a list.
+//new: The address of a pointer to the node to be
+//added to the list.
+//Adds the node ’new’ at the beginning of the list
