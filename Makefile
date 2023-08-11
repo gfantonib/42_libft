@@ -1,4 +1,5 @@
 NAME = libft.a
+
 CFLAGS = -Wall -Wextra -Werror
 
 SOURCES = \
@@ -72,4 +73,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re bonus
-
