@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 12:09:31 by gfantoni          #+#    #+#             */
-/*   Updated: 2023/08/10 09:33:41 by gfantoni         ###   ########.fr       */
+/*   Updated: 2023/08/12 08:15:28 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (fd < 0)
-		return ;
 	if (n == -2147483648)
 	{
 		ft_putchar_fd('-', fd);
