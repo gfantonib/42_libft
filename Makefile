@@ -1,6 +1,7 @@
 NAME = libft.a
-
 CFLAGS = -Wall -Wextra -Werror
+OBJECTS_PATH = objects
+MK = mkdir -p
 
 SOURCES = \
 	ft_atoi.c \
@@ -37,8 +38,6 @@ SOURCES = \
 	ft_substr.c \
 	ft_tolower.c \
 	ft_toupper.c \
-
-BONUS_SOURCES = \
 	ft_lstadd_back_bonus.c \
 	ft_lstadd_front_bonus.c \
 	ft_lstclear_bonus.c \
@@ -48,24 +47,21 @@ BONUS_SOURCES = \
 	ft_lstmap_bonus.c \
 	ft_lstnew_bonus.c \
 	ft_lstsize_bonus.c \
+	ft_printf_fd.c \
 
-OBJECTS = $(SOURCES:%.c=%.o)
-
-BONUS_OBJECTS = $(BONUS_SOURCES:%.c=%.o)
+OBJECTS	= $(addprefix $(OBJECTS_PATH)/, $(SOURCES:%.c=%.o))
 
 all: $(NAME)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+$(OBJECTS_PATH)/%.o: %.c
+	$(MK) $(@D)
+	$(CC) $(CFLAGS) -o $@ -c $< $(HEADER)
 
 $(NAME): $(OBJECTS)
-	ar rcs $(NAME) $?
-
-bonus:
-	@make OBJECTS="$(BONUS_OBJECTS)" --no-print-directory
+	ar rcs $(NAME) $(OBJECTS)
 
 clean:
-	rm -f $(OBJECTS) $(BONUS_OBJECTS)
+	rm -rf $(OBJECTS_PATH)
 
 fclean: clean
 	rm -f $(NAME)
