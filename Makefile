@@ -47,6 +47,12 @@ SOURCES = \
 	ft_lstmap_bonus.c \
 	ft_lstnew_bonus.c \
 	ft_lstsize_bonus.c \
+	ft_factorial.c \
+	ft_power.c \
+	ft_sqrt.c \
+	ft_fibonacci.c \
+	ft_find_next_prime.c \
+	ft_is_prime.c \
 	ft_printf.c \
 	ft_printf_fd.c \
 	ft_trashman.c \

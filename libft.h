@@ -6,7 +6,7 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 13:02:21 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/06/25 21:40:59 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/06/25 22:17:03 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_list
 	struct s_list	*next;
 }			t_list;
 
-// PART I
+// LIBFT
 size_t		ft_strlen(const char *str);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
@@ -51,8 +51,6 @@ char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strnstr(const char *big, const char *little, size_t len);
 char		*ft_strdup(const char *s1);
-
-// PART II
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1, char const *set);
@@ -64,8 +62,6 @@ int			ft_putchar_fd(char c, int fd);
 int			ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
-
-// BONUS
 t_list		*ft_lstnew(void *content);
 void		ft_lstadd_front(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);
@@ -75,6 +71,14 @@ void		ft_lstdelone(t_list *lst, void (*del)(void *));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// MATH
+int			ft_factorial(int nb);
+int			ft_power(int nb, int power);
+long		ft_sqrt(long nb, long kick);
+int			ft_fibonacci(int index);
+int			ft_find_next_prime(int nb);
+int			ft_is_prime(int nb);
 
 // FT_PRINTF
 int			ft_printf(const char *format, ...);
