@@ -47,6 +47,7 @@ SOURCES = \
 	ft_lstmap_bonus.c \
 	ft_lstnew_bonus.c \
 	ft_lstsize_bonus.c \
+	ft_printf.c \
 	ft_printf_fd.c \
 	ft_trashman.c \
 

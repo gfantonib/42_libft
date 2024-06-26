@@ -6,12 +6,11 @@
 /*   By: gfantoni <gfantoni@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 10:05:08 by gfantoni          #+#    #+#             */
-/*   Updated: 2024/06/25 19:37:39 by gfantoni         ###   ########.fr       */
+/*   Updated: 2024/06/25 21:31:05 by gfantoni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdarg.h>
 
 static int	ft_putchar_fd_printf(int fd, char c)
 {
